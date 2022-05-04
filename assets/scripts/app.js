@@ -9,8 +9,10 @@ const calculateTime = () => {
   let dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   let hour = date.getHours();
   let min = date.getMinutes();
-  let day = date.getDay();
   let second = date.getSeconds();
+   hour = hour < 10 ? "0" + hour : hour;
+  min = min < 10 ? "0" + min : min;
+  second = second < 10 ? "0" + second : second;
   let ampm = hour >= 12 ? "PM" : "AM";
   dayEl.textContent = dayNames[dayNumber];
   hourEL.textContent = hour;
@@ -18,5 +20,4 @@ const calculateTime = () => {
   ampmEL.textContent = ampm;
   secondEL.textContent = second;
 };
-// calculateTime();
 setInterval(calculateTime, 1000);
