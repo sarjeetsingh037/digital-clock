@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+font-family: 'Roboto Condensed', sans-serif;
+overflow: hidden;
+
+background:conic-gradient(at bottom left, deeppink, cyan) ;
+}
+.container {
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5px;
+}
+
+.clock h1{
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+@media screen and (max-width:768px) {
+    .clock h1 {
+        font-size :2rem;
+    }
+}
+@media(max-width:480px) {
+    .clock h1 {
+        font-size :1rem;
+    }
+}

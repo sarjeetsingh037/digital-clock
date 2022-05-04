@@ -1,0 +1,22 @@
+const dayEl = document.querySelector(".day");
+const hourEL = document.querySelector(".hour");
+const minuteEL = document.querySelector(".minute");
+const ampmEL = document.querySelector(".ampm");
+const secondEL = document.querySelector(".second");
+const calculateTime = () => {
+  let date = new Date();
+  let dayNumber = date.getDay();
+  let dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let hour = date.getHours();
+  let min = date.getMinutes();
+  let day = date.getDay();
+  let second = date.getSeconds();
+  let ampm = hour >= 12 ? "PM" : "AM";
+  dayEl.textContent = dayNames[dayNumber];
+  hourEL.textContent = hour;
+  minuteEL.textContent = min;
+  ampmEL.textContent = ampm;
+  secondEL.textContent = second;
+};
+// calculateTime();
+setInterval(calculateTime, 1000);
